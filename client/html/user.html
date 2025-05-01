@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Generator Form</title>
+    <link rel="stylesheet" href="../css/users.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <script type="module" src="../js/user.js"></script>
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p id="loadingText"></p>
+        </div>
+    </div>
+    <div id="navbarContainer"></div>
+    <div id="apiWarningContainer"></div>
+    <h1 id="pageTitle"></h1>
+    <div class="form-container">
+        <form id="storyForm" action="submit_form.php" method="POST">
+            <!-- Genre -->
+            <div class="form-group">
+                <label for="genre" id="genreLabel"></label>
+                <select id="genre" name="genre" required>
+                    <option value="" id="genrePlaceholder"></option>
+                </select>
+            </div>
+
+            <!-- Main Character Name -->
+            <div class="form-group">
+                <label for="characterName" id="characterNameLabel"></label>
+                <input type="text" id="characterName" name="characterName" required>
+            </div>
+
+            <!-- Role -->
+            <div class="form-group">
+                <label for="role" id="roleLabel"></label>
+                <select id="role" name="role" required>
+                    <option value="" id="rolePlaceholder"></option>
+                </select>
+            </div>
+
+            <!-- Setting -->
+            <div class="form-group">
+                <label for="setting" id="settingLabel"></label>
+                <select id="setting" name="setting" required>
+                    <option value="" id="settingPlaceholder"></option>
+                </select>
+            </div>
+
+            <!-- Tone -->
+            <div class="form-group">
+                <label for="tone" id="toneLabel"></label>
+                <select id="tone" name="tone" required>
+                    <option value="" id="tonePlaceholder"></option>
+                </select>
+            </div>
+
+            <!-- Plot Twist -->
+            <div class="form-group">
+                <label for="plotTwist" id="plotTwistLabel"></label>
+                <input type="checkbox" id="plotTwist" name="plotTwist">
+                <label for="plotTwist" id="plotTwistCheckboxLabel"></label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="generateButton"></button>
+        </form>
+    </div>
+    <div id="storyOutput"></div>
+</body>
+</html>
